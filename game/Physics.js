@@ -1,5 +1,4 @@
 import { vec3, mat4 } from '../lib/gl-matrix-module.js';
-import { App } from './17-game.js';
 
 export class Physics {
 
@@ -32,7 +31,7 @@ export class Physics {
     }
 
     resolveCollision(a, b) {
-        //console.log(gameStartTime);
+        //console.log(localStorage.getItem('gameStartTime'));
         //console.log(b);
         // Update bounding boxes with global translation.
         const ta = a.getGlobalTransform();
@@ -66,9 +65,10 @@ export class Physics {
             let dir = [0, -10, 0]
             vec3.add(b.translation, b.translation, dir);
             b.updateTransform();
-
-            
-
+            var gameEndTime = (Date.now() - localStorage.getItem('gameStartTime'))/1000;
+            console.log(gameEndTime);
+            alert(gameEndTime);
+            window.history.back();
             return;
         }
         const diffa = vec3.sub(vec3.create(), maxb, mina);

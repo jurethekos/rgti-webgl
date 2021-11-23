@@ -10,7 +10,7 @@ import { SceneBuilder } from './SceneBuilder.js';
 import { Light } from './Light.js';
 import { Floor } from './Floor.js';
 
-export class App extends Application {
+class App extends Application {
 
     start() {
         const gl = this.gl;
@@ -20,8 +20,7 @@ export class App extends Application {
         this.startTime = this.time;
         this.aspect = 1;
 
-        this.gameStartTime = Date.now();
-        this.gameEndTime = Date.now();
+        localStorage.setItem('gameStartTime', Date.now());
 
         this.pointerlockchangeHandler = this.pointerlockchangeHandler.bind(this);
         document.addEventListener('pointerlockchange', this.pointerlockchangeHandler);
@@ -77,7 +76,8 @@ export class App extends Application {
         if (this.physics) {
             this.physics.update(dt);
         }
-        
+
+        document.getElementById("timer").innerHTML = (Date.now() - localStorage.getItem('gameStartTime'))/1000;;
     }
 
     render() {
