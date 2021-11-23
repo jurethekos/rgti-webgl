@@ -42,6 +42,7 @@ export class Renderer {
         const program = this.programs.simple;
         gl.useProgram(program.program);
 
+        
         let matrix = mat4.create();
         let matrixStack = [];
 
