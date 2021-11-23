@@ -13,6 +13,19 @@
       "far": 100
     },
     {
+    "type": "model",
+      "info": "finish",
+      "mesh": 2,
+      "texture": 0,
+      "collectable": true,
+      "aabb": {
+        "min": [-1, -1, -1],
+        "max": [1, 1, 1]
+      },
+      "translation": [10, 0.5, 10],
+      "scale": [0.1, 0.1, 0.1]
+    },
+    {
       "type": "model",
       "mesh": 0,
       "texture": 0,
@@ -34,16 +47,6 @@
     },
     {
       "type": "model",
-      "mesh": 1,
-      "texture": 1,
-      "aabb": {
-        "min": [-0.5, -0.5, -0.5],
-        "max": [0.5, 0.5, 0.5]
-      },
-      "translation": [0, 1, -5]
-    },
-    {
-      "type": "model",
       "mesh": 0,
       "texture": 0,
       "aabb": {
@@ -53,14 +56,83 @@
       "translation": [3, 0.1, -1],
       "rotation": [0, 1, 0],
       "scale": [1, 0.1, 1]
+    },
+
+
+    {
+      "type": "model",
+      "info": "floor",
+      "mesh": 0,
+      "texture": 2,
+      "aabb": {
+        "min": [-0, -0, -0],
+        "max": [0, 0, 0]
+      },
+      "translation": [0, 0, 0],
+      "scale": [20, 0.1, 20]
+    },
+    {
+      "type": "model",
+      "info": "wall",
+      "mesh": 0,
+      "texture": 3,
+      "aabb": {
+        "min": [-20, -5, -0.1],
+        "max": [20, 5, 0.1]
+      },
+      "translation": [0, 0, -20],
+      "rotation": [0, 0, 0],
+      "scale": [20, 5, 0.1]
+    },
+    {
+      "type": "model",
+      "info": "wall",
+      "mesh": 0,
+      "texture": 3,
+      "aabb": {
+        "min": [-20, -5, -0.1],
+        "max": [20, 5, 0.1]
+      },
+      "translation": [0, 0, 20],
+      "rotation": [0, 0, 0],
+      "scale": [20, 5, 0.1]
+    },
+    {
+      "type": "model",
+      "info": "wall",
+      "mesh": 0,
+      "texture": 3,
+      "aabb": {
+        "min": [-0.1, -5, -20],
+        "max": [0.1, 5, 20]
+      },
+      "translation": [20, 0, 0],
+      "rotation": [0, 0, 0],
+      "scale": [0.1, 5, 20]
+    },
+    {
+      "type": "model",
+      "info": "wall",
+      "mesh": 0,
+      "texture": 3,
+      "aabb": {
+        "min": [-0.1, -5, -20],
+        "max": [0.1, 5, 20]
+      },
+      "translation": [-20, 0, 0],
+      "rotation": [0, 0, 0],
+      "scale": [0.1, 5, 20]
     }
   ],
   "textures": [
     "../common/images/crate-diffuse.png",
-    "../common/images/grass.png"
+    "../common/images/grass.png",
+    "../common/images/tiles.png",
+    "../common/images/wall.jpg"
   ],
   "meshes": [
     "../common/models/cube.json",
-    "../common/models/pyramid.json"
+    "../common/models/pyramid.json",
+    "../common/models/sphere.json"
   ]
 }

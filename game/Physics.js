@@ -31,6 +31,7 @@ export class Physics {
     }
 
     resolveCollision(a, b) {
+        //console.log(a);
         // Update bounding boxes with global translation.
         const ta = a.getGlobalTransform();
         const tb = b.getGlobalTransform();
