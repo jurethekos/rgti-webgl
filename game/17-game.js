@@ -10,7 +10,7 @@ import { SceneBuilder } from './SceneBuilder.js';
 import { Light } from './Light.js';
 import { Floor } from './Floor.js';
 
-class App extends Application {
+export class App extends Application {
 
     start() {
         const gl = this.gl;
@@ -19,6 +19,9 @@ class App extends Application {
         this.time = Date.now();
         this.startTime = this.time;
         this.aspect = 1;
+
+        this.gameStartTime = Date.now();
+        this.gameEndTime = Date.now();
 
         this.pointerlockchangeHandler = this.pointerlockchangeHandler.bind(this);
         document.addEventListener('pointerlockchange', this.pointerlockchangeHandler);
@@ -30,6 +33,7 @@ class App extends Application {
         const scene = await new SceneLoader().loadScene(uri);
         const builder = new SceneBuilder(scene);
         this.scene = builder.build();
+        //console.log(this.scene);
         this.physics = new Physics(this.scene);
 
         // Find first camera.
@@ -73,6 +77,7 @@ class App extends Application {
         if (this.physics) {
             this.physics.update(dt);
         }
+        
     }
 
     render() {
