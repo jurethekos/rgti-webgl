@@ -153,6 +153,15 @@ export class Camera extends Node {
         alert(time);
         window.history.back();
     }
+    async grassSound() {
+        if(localStorage.getItem('soundTimer') == "0"){
+            var audio = new Audio("../common/sounds/grass.mp3");
+            audio.play();
+            localStorage.setItem('soundTimer', 1);
+            await new Promise(resolve => setTimeout(resolve, 3000));
+            localStorage.setItem('soundTimer', 0);
+        }
+    }
 
 }
 

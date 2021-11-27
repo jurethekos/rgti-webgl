@@ -118,6 +118,7 @@ export class Physics {
             a.slowdown();
             //var audio = new Audio("../common/sounds/smb_powerup.wav");
             //audio.play();
+            a.grassSound();
             return;
         }
 
