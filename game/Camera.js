@@ -59,6 +59,7 @@ export class Camera extends Node {
 
         // 4: limit speed
         const len = vec3.len(c.velocity);
+        console.log(len);
         if (len > c.maxSpeed) {
             vec3.scale(c.velocity, c.velocity, c.maxSpeed / len);
         }
@@ -110,14 +111,17 @@ export class Camera extends Node {
         this.keys[e.code] = false;
     }
 
-    speedup(){
-        //registered colission with speedup collectable
+    async speedup() {
+        //registered collision with speedup collectable
         console.log("speedup");
-
+        const c = this;
+        c.maxSpeed = 14;
+        await new Promise(resolve => setTimeout(resolve, 5000));
+        c.maxSpeed = 8;
     }
 
     timereduction(){
-        //registered colission with speedup collectable
+        //registered collision with speedup collectable
         console.log("timereduction");
     
     }
@@ -131,7 +135,7 @@ Camera.defaults = {
     far              : 100,
     velocity         : [0, 0, 0],
     mouseSensitivity : 0.002,
-    maxSpeed         : 3,
+    maxSpeed         : 8,
     friction         : 0.2,
     acceleration     : 20
 };
