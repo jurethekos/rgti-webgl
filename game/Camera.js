@@ -8,7 +8,7 @@ export class Camera extends Node {
     constructor(options) {
         super(options);
         Utils.init(this, this.constructor.defaults, options);
-
+        localStorage.setItem('soundTimer', 0);
         this.projection = mat4.create();
         this.updateProjection();
 
@@ -120,10 +120,38 @@ export class Camera extends Node {
         c.maxSpeed = 8;
     }
 
+    async slowdown() {
+        //registered collision with speedup collectable
+        //console.log("speedup");
+        const c = this;
+        c.maxSpeed = 4;
+        await new Promise(resolve => setTimeout(resolve, 3000));
+        c.maxSpeed = 8;
+        
+    }
+
     timereduction(){
         //registered collision with speedup collectable
         console.log("timereduction");
     
+    }
+
+    async sound() {
+        //registered collision with speedup collectable
+        //console.log("speedup");
+        if(localStorage.getItem('soundTimer') == "0"){
+            var audio = new Audio("../common/sounds/roblox-death-sound-effect.mp3");
+            audio.play();
+            localStorage.setItem('soundTimer', 1);
+            await new Promise(resolve => setTimeout(resolve, 400));
+            localStorage.setItem('soundTimer', 0);
+        }
+
+    }
+    async finish(time) {
+        await new Promise(resolve => setTimeout(resolve, 100));
+        alert(time);
+        window.history.back();
     }
 
 }

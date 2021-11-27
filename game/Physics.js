@@ -58,7 +58,7 @@ export class Physics {
         if (!isColliding) {
             return;
         }
-
+        
         // Move node A minimally to avoid collision.
 
         //preveri če je collision s collectablom
@@ -72,8 +72,11 @@ export class Physics {
             var gameEndTime = (Date.now() - localStorage.getItem('gameStartTime'))/1000 - localStorage.getItem('gameReductedTime');;
             localStorage.setItem('gameReductedTime', '00');
             console.log(gameEndTime);
-            alert(gameEndTime);
-            window.history.back();
+            a.finish(gameEndTime);
+            //alert(gameEndTime);
+            var audio = new Audio("../common/sounds/mario.wav");
+            audio.play();
+            //window.history.back();
             return;
         }
         //SPEEDUP
@@ -84,6 +87,8 @@ export class Physics {
             vec3.add(b.translation, b.translation, dir);
             b.updateTransform();
             a.speedup();
+            var audio = new Audio("../common/sounds/smb_powerup.wav");
+            audio.play();
             return;
         }
         //TIMEREDUCTION
@@ -103,8 +108,20 @@ export class Physics {
             b.updateTransform();
             console.log(spremenljivka);
             localStorage.setItem('gameReductedTime', spremenljivka);
+            var audio = new Audio("../common/sounds/smb_powerup.wav");
+            audio.play();
             return;
         }
+        //GRASS
+        if(b.collectable == true && b.info == "grass"){
+            console.log(b);
+            a.slowdown();
+            //var audio = new Audio("../common/sounds/smb_powerup.wav");
+            //audio.play();
+            return;
+        }
+
+        a.sound();
 
         const diffa = vec3.sub(vec3.create(), maxb, mina);
         const diffb = vec3.sub(vec3.create(), maxa, minb);
