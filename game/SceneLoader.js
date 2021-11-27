@@ -6,8 +6,8 @@ export class SceneLoader {
         //random začetna pozicija
         let pozicija = Math.random() * (4 - 0) + 0;
         pozicija = Math.round(pozicija);
-        const x = [0, 1, 2, 3, 4];
-        const z = [0, 1, 2, 3, 4];
+        const x = [0, 0, 0, 0, 0];
+        const z = [0, 0, 0, 0, 0];
 
         scene.nodes[0].translation[0] = x[pozicija];
         scene.nodes[0].translation[2] = z[pozicija];

@@ -59,7 +59,7 @@ export class Camera extends Node {
 
         // 4: limit speed
         const len = vec3.len(c.velocity);
-        console.log(len);
+        //console.log(len);
         if (len > c.maxSpeed) {
             vec3.scale(c.velocity, c.velocity, c.maxSpeed / len);
         }
@@ -113,7 +113,7 @@ export class Camera extends Node {
 
     async speedup() {
         //registered collision with speedup collectable
-        console.log("speedup");
+        //console.log("speedup");
         const c = this;
         c.maxSpeed = 14;
         await new Promise(resolve => setTimeout(resolve, 5000));
