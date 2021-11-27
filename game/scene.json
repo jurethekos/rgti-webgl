@@ -338,7 +338,7 @@
       "type": "model",
       "info": "sotoriWall",
       "mesh": 0,
-      "texture": 3,
+      "texture": 11,
       "aabb": {
         "min": [-0.1, -1.5, -5],
         "max": [0.1, 1.5, 5]
@@ -350,7 +350,7 @@
       "type": "model",
       "info": "sotoriWall",
       "mesh": 0,
-      "texture": 3,
+      "texture": 11,
       "aabb": {
         "min": [-0.1, -1.5, -5],
         "max": [0.1, 1.5, 5]
@@ -362,7 +362,7 @@
       "type": "model",
       "info": "sotoriRoof",
       "mesh": 0,
-      "texture": 3,
+      "texture": 11,
       "aabb": {
         "min": [-0, -0, -0],
         "max": [0, 0, 0]
@@ -381,7 +381,9 @@
     "../common/images/locker.jpg",
     "../common/images/tovarnaStena.jpg",
     "../common/images/asphalt.jpg",
-    "../common/images/fence.jpg"
+    "../common/images/fence.jpg",
+    "../common/images/modernBuilding.jpg",
+    "../common/images/sotori.jpg"
   ],
   "meshes": [
     "../common/models/cube.json",
