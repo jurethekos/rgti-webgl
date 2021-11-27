@@ -14,7 +14,7 @@ class App extends Application {
 
     start() {
         const gl = this.gl;
-
+        localStorage.setItem('gameReductedTime', '00');
         this.renderer = new Renderer(gl);
         this.time = Date.now();
         this.startTime = this.time;
@@ -79,6 +79,7 @@ class App extends Application {
 
         document.getElementById("timer").innerHTML = (Date.now() - localStorage.getItem('gameStartTime'))/1000;;
     }
+    
 
     render() {
         if (this.scene) {

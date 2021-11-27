@@ -69,7 +69,8 @@ export class Physics {
             let dir = [0, -10, 0]
             vec3.add(b.translation, b.translation, dir);
             b.updateTransform();
-            var gameEndTime = (Date.now() - localStorage.getItem('gameStartTime'))/1000;
+            var gameEndTime = (Date.now() - localStorage.getItem('gameStartTime'))/1000 - localStorage.getItem('gameReductedTime');;
+            localStorage.setItem('gameReductedTime', '00');
             console.log(gameEndTime);
             alert(gameEndTime);
             window.history.back();
@@ -89,10 +90,19 @@ export class Physics {
         if(b.collectable == true && b.info == "timereduction"){
             console.log(b);
             //b.translation[1] = -10;
+            let spremenljivka = localStorage.getItem('gameReductedTime');
+            if (spremenljivka === "00"){
+                spremenljivka = "05";
+            }
+            else if(spremenljivka === "05"){
+                spremenljivka = "10";
+            }
+            
             let dir = [0, -10, 0]
             vec3.add(b.translation, b.translation, dir);
             b.updateTransform();
-            a.timereduction();
+            console.log(spremenljivka);
+            localStorage.setItem('gameReductedTime', spremenljivka);
             return;
         }
 
