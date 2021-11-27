@@ -460,7 +460,7 @@
       "type": "model",
       "info": "box",
       "mesh": 0,
-      "texture": 0,
+      "texture": 12,
       "aabb": {
         "min": [-1, -1, -1],
         "max": [1, 1, 1]
@@ -471,7 +471,7 @@
       "type": "model",
       "info": "box",
       "mesh": 0,
-      "texture": 0,
+      "texture": 12,
       "aabb": {
         "min": [-1, -1, -1],
         "max": [1, 1, 1]
@@ -504,7 +504,7 @@
       "type": "model",
       "info": "box",
       "mesh": 0,
-      "texture": 0,
+      "texture": 12,
       "aabb": {
         "min": [-1, -1, -1],
         "max": [1, 1, 1]
@@ -527,7 +527,7 @@
       "type": "model",
       "info": "box",
       "mesh": 0,
-      "texture": 0,
+      "texture": 12,
       "aabb": {
         "min": [-1, -1, -1],
         "max": [1, 1, 1]
@@ -538,7 +538,7 @@
       "type": "model",
       "info": "box",
       "mesh": 0,
-      "texture": 0,
+      "texture": 12,
       "aabb": {
         "min": [-1, -1, -1],
         "max": [1, 1, 1]
@@ -665,7 +665,7 @@
       "type": "model",
       "info": "box",
       "mesh": 0,
-      "texture": 0,
+      "texture": 12,
       "aabb": {
         "min": [-1, -1, -1],
         "max": [1, 1, 1]
@@ -676,7 +676,7 @@
       "type": "model",
       "info": "box",
       "mesh": 0,
-      "texture": 0,
+      "texture": 12,
       "aabb": {
         "min": [-1, -1, -1],
         "max": [1, 1, 1]
@@ -856,7 +856,9 @@
     "../common/images/asphalt.jpg",
     "../common/images/fence.jpg",
     "../common/images/modernBuilding.jpg",
-    "../common/images/sotori.jpg"
+    "../common/images/sotori.jpg",
+    "../common/images/militaryCrate.jpg"
+
   ],
   "meshes": [
     "../common/models/cube.json",
