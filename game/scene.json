@@ -16,7 +16,7 @@
       "type": "model",
       "info": "finish",
       "mesh": 2,
-      "texture": 0,
+      "texture": 13,
       "collectable": true,
       "aabb": {
         "min": [-1, -1, -1],
@@ -29,7 +29,7 @@
       "type": "model",
       "info": "speedup",
       "mesh": 2,
-      "texture": 0,
+      "texture": 15,
       "collectable": true,
       "aabb": {
         "min": [-1, -1, -1],
@@ -42,7 +42,7 @@
       "type": "model",
       "info": "speedup",
       "mesh": 2,
-      "texture": 0,
+      "texture": 15,
       "collectable": true,
       "aabb": {
         "min": [-1, -1, -1],
@@ -55,7 +55,7 @@
       "type": "model",
       "info": "timereduction",
       "mesh": 2,
-      "texture": 0,
+      "texture": 14,
       "collectable": true,
       "aabb": {
         "min": [-1, -1, -1],
@@ -68,7 +68,7 @@
       "type": "model",
       "info": "timereduction",
       "mesh": 2,
-      "texture": 0,
+      "texture": 14,
       "collectable": true,
       "aabb": {
         "min": [-1, -1, -1],
@@ -857,7 +857,10 @@
     "../common/images/fence.jpg",
     "../common/images/modernBuilding.jpg",
     "../common/images/sotori.jpg",
-    "../common/images/militaryCrate.jpg"
+    "../common/images/militaryCrate.jpg",
+    "../common/images/yellow.jpg",
+    "../common/images/green.jpg",
+    "../common/images/blue.jpg"
 
   ],
   "meshes": [
