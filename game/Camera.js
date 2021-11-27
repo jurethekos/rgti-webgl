@@ -110,6 +110,18 @@ export class Camera extends Node {
         this.keys[e.code] = false;
     }
 
+    speedup(){
+        //registered colission with speedup collectable
+        console.log("speedup");
+
+    }
+
+    timereduction(){
+        //registered colission with speedup collectable
+        console.log("timereduction");
+
+    }
+
 }
 
 Camera.defaults = {

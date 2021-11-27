@@ -1,4 +1,5 @@
 import { vec3, mat4 } from '../lib/gl-matrix-module.js';
+import { Camera } from './Camera.js';
 
 export class Physics {
 
@@ -59,7 +60,10 @@ export class Physics {
         }
 
         // Move node A minimally to avoid collision.
-        if(b.collectable == true){
+
+        //preveri če je collision s collectablom
+        //FINISH
+        if(b.collectable == true && b.info == "finish"){
             console.log(b);
             //b.translation[1] = -10;
             let dir = [0, -10, 0]
@@ -71,6 +75,27 @@ export class Physics {
             window.history.back();
             return;
         }
+        //SPEEDUP
+        if(b.collectable == true && b.info == "speedup"){
+            console.log(b);
+            //b.translation[1] = -10;
+            let dir = [0, -10, 0]
+            vec3.add(b.translation, b.translation, dir);
+            b.updateTransform();
+            a.speedup();
+            return;
+        }
+        //TIMEREDUCTION
+        if(b.collectable == true && b.info == "timereduction"){
+            console.log(b);
+            //b.translation[1] = -10;
+            let dir = [0, -10, 0]
+            vec3.add(b.translation, b.translation, dir);
+            b.updateTransform();
+            a.timereduction();
+            return;
+        }
+
         const diffa = vec3.sub(vec3.create(), maxb, mina);
         const diffb = vec3.sub(vec3.create(), maxa, minb);
 

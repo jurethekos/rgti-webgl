@@ -16,17 +16,19 @@ export class SceneBuilder {
         switch (spec.type) {
             case 'camera': return new Camera(spec);
             case 'model': {
-                //console.log(spec);
+                //console.log(spec.info);
                 if (spec.collectable == true){
                     const collectable = true;
+                    const info = spec.info;
                     const mesh = new Mesh(this.spec.meshes[spec.mesh]);
                     const texture = this.spec.textures[spec.texture];
-                    return new Model(mesh, texture, spec, collectable);
+                    return new Model(mesh, texture, spec, collectable, info);
                 } else{
                     const collectable = false;
+                    const info = "object";
                     const mesh = new Mesh(this.spec.meshes[spec.mesh]);
                     const texture = this.spec.textures[spec.texture];
-                    return new Model(mesh, texture, spec, collectable);
+                    return new Model(mesh, texture, spec, collectable, info);
                 }
             }
             default: return new Node(spec);
