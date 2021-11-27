@@ -119,7 +119,7 @@ export class Camera extends Node {
     timereduction(){
         //registered colission with speedup collectable
         console.log("timereduction");
-
+    
     }
 
 }
