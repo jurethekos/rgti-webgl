@@ -69,6 +69,7 @@ class App extends Application {
         const dt = (this.time - this.startTime) * 0.001;
         this.startTime = this.time;
 
+        //console.log(this.camera.translation[0], this.camera.translation[2]);
         if (this.camera) {
             this.camera.update(dt);
         }
