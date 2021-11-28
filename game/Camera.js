@@ -65,19 +65,19 @@ export class Camera extends Node {
                 vec3.add(this.translation, this.translation, diff);
             }
         }
-        console.log(this.jumping);
+        //console.log(this.jumping);
         if (this.onTop && this.jumping && this.translation[1] <= 3){
             //console.log("if1");
             this.jumping == false;
             this.upSpeed = 0;
         }
         //gravitacija
-        console.log(this.translation[1]);
+        //console.log(this.translation[1]);
         //console.log(this.jumping);
         //console.log(this.onTop);
         //console.log(this.upSpeed);
         if ((this.jumping && this.upSpeed > -0.2 && this.onTop == false && this.translation[1] > 1) || (this.jumping && this.onTop && this.translation[1] > 3) || (!this.jumping && !this.onTop && this.translation[1] > 1)){
-            console.log("if2");
+            //console.log("if2");
             this.upSpeed -= 0.01;
             let diff = [0, this.upSpeed, 0];
             vec3.add(this.translation, this.translation, diff);
