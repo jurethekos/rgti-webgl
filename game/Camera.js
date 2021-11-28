@@ -16,6 +16,7 @@ export class Camera extends Node {
         this.keydownHandler = this.keydownHandler.bind(this);
         this.keyupHandler = this.keyupHandler.bind(this);
         this.keys = {};
+        this.spacePressed = false;
     }
 
     updateProjection() {
