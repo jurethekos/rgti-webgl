@@ -103,7 +103,7 @@ export class Physics {
         //preveri če je collision s collectablom
         //FINISH
         if(b.collectable == true && b.info == "finish"){
-            console.log(b);
+            //console.log(b);
             //b.translation[1] = -10;
             let dir = [0, -10, 0]
             vec3.add(b.translation, b.translation, dir);
@@ -122,7 +122,7 @@ export class Physics {
         }
         //SPEEDUP
         if(b.collectable == true && b.info == "speedup"){
-            console.log(b);
+            //console.log(b);
             //b.translation[1] = -10;
             let dir = [0, -10, 0]
             vec3.add(b.translation, b.translation, dir);
@@ -134,7 +134,7 @@ export class Physics {
         }
         //TIMEREDUCTION
         if(b.collectable == true && b.info == "timereduction"){
-            console.log(b);
+            //console.log(b);
             //b.translation[1] = -10;
             let spremenljivka = localStorage.getItem('gameReductedTime');
             if (spremenljivka === "00"){
@@ -155,7 +155,7 @@ export class Physics {
         }
         //GRASS
         if(b.collectable == true && b.info == "grass"){
-            console.log(b);
+            //console.log(b);
             a.slowdown();
             //var audio = new Audio("../common/sounds/smb_powerup.wav");
             //audio.play();
