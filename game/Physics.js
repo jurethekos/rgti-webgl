@@ -69,10 +69,11 @@ export class Physics {
             let dir = [0, -10, 0]
             vec3.add(b.translation, b.translation, dir);
             b.updateTransform();
-            var gameEndTime = (Date.now() - localStorage.getItem('gameStartTime'))/1000 - localStorage.getItem('gameReductedTime');;
+            var gameEndTime = (Date.now() - localStorage.getItem('gameStartTime'))/1000 - localStorage.getItem('gameReductedTime');
             localStorage.setItem('gameReductedTime', '00');
             console.log(gameEndTime);
-            //document.getElementById("endTime").innerHTML = gameEndTime;
+            //var e = document.getElementById("endTime");
+            //e.innerHTML = gameEndTime;
             a.finish(gameEndTime);
             //alert(gameEndTime);
             var audio = new Audio("../common/sounds/mario.wav");
