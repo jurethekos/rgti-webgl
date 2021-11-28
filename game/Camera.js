@@ -67,15 +67,15 @@ export class Camera extends Node {
         }
         console.log(this.jumping);
         if (this.onTop && this.jumping && this.translation[1] <= 3){
-            console.log("if1");
+            //console.log("if1");
             this.jumping == false;
             this.upSpeed = 0;
         }
         //gravitacija
         console.log(this.translation[1]);
         //console.log(this.jumping);
-        console.log(this.onTop);
-        console.log(this.upSpeed);
+        //console.log(this.onTop);
+        //console.log(this.upSpeed);
         if ((this.jumping && this.upSpeed > -0.2 && this.onTop == false && this.translation[1] > 1) || (this.jumping && this.onTop && this.translation[1] > 3) || (!this.jumping && !this.onTop && this.translation[1] > 1)){
             console.log("if2");
             this.upSpeed -= 0.01;
@@ -83,9 +83,11 @@ export class Camera extends Node {
             vec3.add(this.translation, this.translation, diff);
         } 
         if (this.jumping && this.upSpeed < -0.2 && this.onTop == false ){
-            console.log("if3");
-            console.log("endjump");
-            this.upSpeed = 0;
+            //console.log("if3");
+            //console.log("endjump");
+            if(this.translation[1] == 1){
+                this.upSpeed = 0;
+            }
             this.jumping = false;
             let diff = [0, 0, 0];
             if(this.translation[1] > 2){
@@ -97,11 +99,11 @@ export class Camera extends Node {
             }
         }
         if (this.jumping && this.upSpeed == 0 && this.onTop){
-            console.log("if4");
+            //console.log("if4");
             this.jumping = false;
         }
         if (!this.jumping && !this.onTop && this.translation[1] <= 1){
-            console.log("if5");
+            //console.log("if5");
             this.upSpeed = 0;
             this.translation[1] = 1;
         }
