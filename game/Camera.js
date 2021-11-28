@@ -45,6 +45,10 @@ export class Camera extends Node {
         if (this.keys['KeyA']) {
             vec3.sub(acc, acc, right);
         }
+        if (this.keys['KeyB']) {
+            var audio = new Audio("../common/sounds/bruh.mp3");
+            audio.play();
+        }
 
         // 2: update velocity
         vec3.scaleAndAdd(c.velocity, c.velocity, acc, dt * c.acceleration);
