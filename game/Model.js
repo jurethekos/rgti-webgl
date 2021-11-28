@@ -8,6 +8,8 @@ export class Model extends Node {
         this.image = image;
         this.collectable = collectable;
         this.info = info;
+        this.movement = 0;
+        this.movementUp = true;
     }
 
 }

@@ -23,7 +23,7 @@ in vec2 vTexCoord;
 out vec4 oColor;
 
 void main() {
-    oColor = texture(uTexture, vTexCoord);
+    oColor = (texture(uTexture, vTexCoord));
 }
 `;
 

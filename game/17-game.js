@@ -24,8 +24,9 @@ class App extends Application {
 
         this.pointerlockchangeHandler = this.pointerlockchangeHandler.bind(this);
         document.addEventListener('pointerlockchange', this.pointerlockchangeHandler);
-
+        
         this.load('scene.json');
+        
     }
 
     async load(uri) {
@@ -68,7 +69,7 @@ class App extends Application {
         const t = this.time = Date.now();
         const dt = (this.time - this.startTime) * 0.001;
         this.startTime = this.time;
-
+        
         //console.log(this.camera.translation[0], this.camera.translation[2]);
         if (this.camera) {
             this.camera.update(dt);
@@ -105,4 +106,5 @@ document.addEventListener('DOMContentLoaded', () => {
     const app = new App(canvas);
     const gui = new GUI();
     gui.add(app, 'enableCamera');
+    
 });

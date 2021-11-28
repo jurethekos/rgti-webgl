@@ -184,18 +184,18 @@ export class Camera extends Node {
         //registered collision with speedup collectable
         //console.log("speedup");
         const c = this;
-        c.maxSpeed = 14;
+        c.maxSpeed = 7;
         await new Promise(resolve => setTimeout(resolve, 5000));
-        c.maxSpeed = 8;
+        c.maxSpeed = 4;
     }
 
     async slowdown() {
         //registered collision with speedup collectable
         //console.log("speedup");
         const c = this;
-        c.maxSpeed = 4;
+        c.maxSpeed = 2;
         await new Promise(resolve => setTimeout(resolve, 3000));
-        c.maxSpeed = 8;
+        c.maxSpeed = 4;
         
     }
 
@@ -244,7 +244,7 @@ Camera.defaults = {
     far              : 100,
     velocity         : [0, 0, 0],
     mouseSensitivity : 0.002,
-    maxSpeed         : 8,
+    maxSpeed         : 4,
     friction         : 0.2,
     acceleration     : 20
 };

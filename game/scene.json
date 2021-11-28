@@ -22,8 +22,8 @@
         "min": [-1, -1, -1],
         "max": [1, 1, 1]
       },
-      "translation": [0, 0.5, 0],
-      "scale": [0.5, 0.5, 0.02]
+      "translation": [0, 0.9, 0],
+      "scale": [0.5, 0.5, 0.5]
     },
     {
       "type": "model",
@@ -35,7 +35,7 @@
         "min": [-1, -1, -1],
         "max": [1, 1, 1]
       },
-      "translation": [3, 0.5, 10],
+      "translation": [3, 0.4, 10],
       "scale": [0.1, 0.1, 0.1]
     },
     {
@@ -48,7 +48,7 @@
         "min": [-1, -1, -1],
         "max": [1, 1, 1]
       },
-      "translation": [5, 0.5, -17],
+      "translation": [5, 0.4, -17],
       "scale": [0.1, 0.1, 0.1]
     },
     {
@@ -61,7 +61,7 @@
         "min": [-1, -1, -1],
         "max": [1, 1, 1]
       },
-      "translation": [4, 0.5, -4],
+      "translation": [4, 0.4, -4],
       "scale": [0.1, 0.1, 0.1]
     },
     {
@@ -74,7 +74,7 @@
         "min": [-1, -1, -1],
         "max": [1, 1, 1]
       },
-      "translation": [0, 0.5, -11],
+      "translation": [0, 0.4, -11],
       "scale": [0.1, 0.1, 0.1]
     },
     {
@@ -178,6 +178,58 @@
       "translation": [-20, 0, 0],
       "rotation": [0, 0, 0],
       "scale": [0.1, 5, 20]
+    },
+    {
+      "type": "model",
+      "info": "Swall",
+      "mesh": 0,
+      "texture": 5,
+      "aabb": {
+        "min": [-20, -5, -0.1],
+        "max": [20, 5, 0.1]
+      },
+      "translation": [0, 0, -25],
+      "rotation": [0, 0, 0],
+      "scale": [40, 20, 0.1]
+    },
+    {
+      "type": "model",
+      "info": "Swall",
+      "mesh": 0,
+      "texture": 5,
+      "aabb": {
+        "min": [-20, -5, -0.1],
+        "max": [20, 5, 0.1]
+      },
+      "translation": [0, 0, 25],
+      "rotation": [0, 0, 0],
+      "scale": [40, 20, 0.1]
+    },
+    {
+      "type": "model",
+      "info": "Swall",
+      "mesh": 0,
+      "texture": 5,
+      "aabb": {
+        "min": [-0.1, -5, -20],
+        "max": [0.1, 5, 20]
+      },
+      "translation": [25, 0, 0],
+      "rotation": [0, 0, 0],
+      "scale": [0.1, 20, 40]
+    },
+    {
+      "type": "model",
+      "info": "Swall",
+      "mesh": 0,
+      "texture": 5,
+      "aabb": {
+        "min": [-0.1, -5, -20],
+        "max": [0.1, 5, 20]
+      },
+      "translation": [-25, 0, 0],
+      "rotation": [0, 0, 0],
+      "scale": [0.1, 20, 40]
     },
     {
       "type": "model",

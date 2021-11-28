@@ -33,8 +33,27 @@ export class Physics {
 
     resolveCollision(a, b) {
         //console.log(localStorage.getItem('gameStartTime'));
-        //console.log(b);
+        //console.log(b.info);
         // Update bounding boxes with global translation.
+
+        if(b.collectable && b.info != "grass"){
+            //console.log(b.movement);
+            if (b.movementUp){
+                b.movement += 0.001;
+                if(b.movement > 0.02){
+                    b.movementUp = false;
+                }
+                
+            } else{
+                b.movement -= 0.001;
+                if(b.movement < -0.02){
+                    b.movementUp = true;
+                }
+            }
+            vec3.add(b.translation, b.translation, [0, b.movement, 0]);
+            b.updateTransform();
+        }
+
         const ta = a.getGlobalTransform();
         const tb = b.getGlobalTransform();
 
