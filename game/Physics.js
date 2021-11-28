@@ -46,6 +46,7 @@ export class Physics {
         const minb = vec3.add(vec3.create(), posb, b.aabb.min);
         const maxb = vec3.add(vec3.create(), posb, b.aabb.max);
 
+        //console.log(posa[1]);
         // Check if there is collision.
         const isColliding = this.aabbIntersection({
             min: mina,
@@ -55,9 +56,28 @@ export class Physics {
             max: maxb
         });
 
+        if(isColliding){
+            //console.log("colliding");
+        };
+        if(isColliding && posa[1] == 3){
+            a.setOnTop(true);
+            a.onTopOf = b;
+            //console.log("colliding");
+            //console.log(posa[1]);
+            //vec3.set(a.translation, a.translation[0], 3, a.translation[2]);
+            return;
+        };
+        if(!isColliding && posa[1] == 3 && a.onTop && a.onTopOf == b){
+            a.setOnTop(false);
+            //console.log("NOTcolliding");
+            //a.enableFalling();
+            return;
+        };
+        
         if (!isColliding) {
             return;
         }
+        //console.log(posa);
         
         // Move node A minimally to avoid collision.
 
@@ -71,6 +91,7 @@ export class Physics {
             b.updateTransform();
             var gameEndTime = (Date.now() - localStorage.getItem('gameStartTime'))/1000 - localStorage.getItem('gameReductedTime');;
             localStorage.setItem('gameReductedTime', '00');
+            localStorage.setItem('gameEndTime', gameEndTime); //DA LAHKO IZPIŠEMO ČAS NA ENDGAME.HTML
             console.log(gameEndTime);
             a.finish(gameEndTime);
             //alert(gameEndTime);
