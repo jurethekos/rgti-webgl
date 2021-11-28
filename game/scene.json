@@ -16,7 +16,7 @@
       "type": "model",
       "info": "finish",
       "mesh": 2,
-      "texture": 13,
+      "texture": 16,
       "collectable": true,
       "aabb": {
         "min": [-1, -1, -1],
@@ -860,7 +860,8 @@
     "../common/images/militaryCrate.jpg",
     "../common/images/yellow.jpg",
     "../common/images/green.jpg",
-    "../common/images/blue.jpg"
+    "../common/images/blue.jpg",
+    "../common/images/finish.png"
 
   ],
   "meshes": [

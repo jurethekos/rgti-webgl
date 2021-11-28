@@ -77,6 +77,7 @@ export class Physics {
             var audio = new Audio("../common/sounds/mario.wav");
             audio.play();
             //window.history.back();
+            window.location.replace("../endgame.html");
             return;
         }
         //SPEEDUP
