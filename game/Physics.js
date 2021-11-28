@@ -115,8 +115,7 @@ export class Physics {
             console.log(gameEndTime);
 
             a.finish(gameEndTime);
-            var audio = new Audio("../common/sounds/mario.wav");
-            audio.play();
+
             //window.history.back();
             window.location.replace("../endgame.html?" + gameEndTime);
             return;

@@ -111,6 +111,7 @@ export class Camera extends Node {
         
         if (this.keys['KeyB']) {
             var audio = new Audio("../common/sounds/bruh.mp3");
+            audio.volume = 0.1;
             audio.play();
         }
 
