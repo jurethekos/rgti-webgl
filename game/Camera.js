@@ -16,11 +16,15 @@ export class Camera extends Node {
         this.keydownHandler = this.keydownHandler.bind(this);
         this.keyupHandler = this.keyupHandler.bind(this);
         this.keys = {};
+
         this.upSpeed = 0;
         this.jumping = false;
         this.onTop = false;
         this.onTopOf;
         this.downSpeed = 0;
+
+        this.spacePressed = false;
+
     }
 
     updateProjection() {
@@ -50,6 +54,7 @@ export class Camera extends Node {
         if (this.keys['KeyA']) {
             vec3.sub(acc, acc, right);
         }
+
         if (this.keys['Space']) {
             //vec3.sub(acc, acc, right);
             if(this.upSpeed == 0 && this.jumping == false){
@@ -102,7 +107,10 @@ export class Camera extends Node {
         }
         
         
-        
+        if (this.keys['KeyB']) {
+            var audio = new Audio("../common/sounds/bruh.mp3");
+            audio.play();
+        }
 
         // 2: update velocity
         vec3.scaleAndAdd(c.velocity, c.velocity, acc, dt * c.acceleration);

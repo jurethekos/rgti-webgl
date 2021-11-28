@@ -15,7 +15,7 @@
     {
       "type": "model",
       "info": "finish",
-      "mesh": 2,
+      "mesh": 0,
       "texture": 16,
       "collectable": true,
       "aabb": {
@@ -23,7 +23,7 @@
         "max": [1, 1, 1]
       },
       "translation": [0, 0.5, 0],
-      "scale": [0.1, 0.1, 0.1]
+      "scale": [0.5, 0.5, 0.02]
     },
     {
       "type": "model",

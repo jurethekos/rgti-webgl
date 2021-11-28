@@ -89,16 +89,17 @@ export class Physics {
             let dir = [0, -10, 0]
             vec3.add(b.translation, b.translation, dir);
             b.updateTransform();
-            var gameEndTime = (Date.now() - localStorage.getItem('gameStartTime'))/1000 - localStorage.getItem('gameReductedTime');;
+            var gameEndTime = (Date.now() - localStorage.getItem('gameStartTime'))/1000 - localStorage.getItem('gameReductedTime');
             localStorage.setItem('gameReductedTime', '00');
+
             localStorage.setItem('gameEndTime', gameEndTime); //DA LAHKO IZPIŠEMO ČAS NA ENDGAME.HTML
             console.log(gameEndTime);
+
             a.finish(gameEndTime);
-            //alert(gameEndTime);
             var audio = new Audio("../common/sounds/mario.wav");
             audio.play();
             //window.history.back();
-            window.location.replace("../endgame.html");
+            window.location.replace("../endgame.html?" + gameEndTime);
             return;
         }
         //SPEEDUP
