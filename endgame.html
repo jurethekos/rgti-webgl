@@ -42,6 +42,8 @@
     function getTime(){
         console.log(window.location.search.substr(1));
         document.getElementById("endTime").innerHTML = window.location.search.substr(1);
+        var audio = new Audio("../common/sounds/mario.wav");
+        audio.play();
     }
 </script>
 <script src = "/game/Physics.js"></script>
