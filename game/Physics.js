@@ -71,15 +71,11 @@ export class Physics {
             b.updateTransform();
             var gameEndTime = (Date.now() - localStorage.getItem('gameStartTime'))/1000 - localStorage.getItem('gameReductedTime');
             localStorage.setItem('gameReductedTime', '00');
-            console.log(gameEndTime);
-            //var e = document.getElementById("endTime");
-            //e.innerHTML = gameEndTime;
             a.finish(gameEndTime);
-            //alert(gameEndTime);
             var audio = new Audio("../common/sounds/mario.wav");
             audio.play();
             //window.history.back();
-            window.location.replace("../endgame.html");
+            window.location.replace("../endgame.html?" + gameEndTime);
             return;
         }
         //SPEEDUP

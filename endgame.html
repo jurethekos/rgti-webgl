@@ -22,14 +22,29 @@
           .button2:hover {
             box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
           }
+          body {
+              margin: auto;
+              width: 50%;
+          }
+          h1, h2{
+              text-align: center;
+          }
           </style>
+
 </head>
-<body background="./common/images/gameOver.jpg">
+<body background="./common/images/gameOver.jpg" onload="getTime();">
+
     <h1>Congratulations! You won!</h1>
-    <h2 id="endTime">Your time was: xx.xx.xx</h2>
-    <button onclick="window.location.href='game/17-game.html';" class="button button2"> Play again</button>
-    <script src = "/game/Physics.js"></script>
-    <script src = "/game/Camera.js"></script>
-    <script src = "./lib/gl-matrix-module.js"></script>
+    <h2>Your time was:<span id="endTime"></span></h2>
+    <h2><button onclick="window.location.href='game/17-game.html';" class="button button2"> Play again</button></h2>
 </body>
+<script>
+    function getTime(){
+        console.log(window.location.search.substr(1));
+        document.getElementById("endTime").innerHTML = window.location.search.substr(1);
+    }
+</script>
+<script src = "/game/Physics.js"></script>
+<script src = "/game/Camera.js"></script>
+<script src = "./lib/gl-matrix-module.js"></script>
 </html>
